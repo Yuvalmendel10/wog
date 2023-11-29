@@ -17,7 +17,6 @@ pipeline {
                 bat 'dir'
             }
         }
-    }
 
     stage('Download docker compose') {
             steps {
@@ -34,5 +33,7 @@ pipeline {
                 }
             }
         }
+
+    }
 
 }
