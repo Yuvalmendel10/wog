@@ -26,13 +26,21 @@ pipeline {
             }
         }
 
-        stage('Run the docker compose') {
-            steps {
-                script {
-                    bat 'docker-compose up -d'
-                }
+    stage('Run the docker compose') {
+        steps {
+            script {
+                bat 'docker-compose up -d'
             }
         }
+    }
+
+    stage('Test the score with selenium') {
+        steps {
+            script {
+                bat 'python e2e.py'
+            }
+        }
+    }
 
     }
 

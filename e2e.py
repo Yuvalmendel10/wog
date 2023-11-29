@@ -1,3 +1,5 @@
+URL = "http://localhost:8777/"
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -20,3 +22,6 @@ def main_function(URL):
     else:
         print("The score is bad")
         return -1
+
+
+main_function(URL)
