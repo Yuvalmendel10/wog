@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                bat 'ls'
+                bat 'dir'
             }
         }
 
