@@ -6,5 +6,5 @@ services:
       dockerfile: Dockerfile
     image: yuvalmendel10/wog:latest
     ports:
-      - "5000:5000"
+      - "8777:5000"
 
