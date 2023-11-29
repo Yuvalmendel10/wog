@@ -14,7 +14,6 @@ pipeline {
         stage('Checkout to the git repo') {
             steps {
                 checkout scm
-                bat 'dir'
             }
         }
 
