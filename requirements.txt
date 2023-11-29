@@ -1,4 +1,4 @@
 Flask==2.0.1
 Werkzeug==2.0.1
 currencyConverter==0.17.13
-selenium==3.141.0
+selenium==4.11.2
