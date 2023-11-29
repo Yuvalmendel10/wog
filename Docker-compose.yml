@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: yuvalmendel10/wog:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=main_score.py
+      - FLASK_RUN_HOST=0.0.0.0
