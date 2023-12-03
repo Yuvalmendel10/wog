@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_COMPOSE_VERSION = '1.26.0'
         DOCKER_IMAGE_NAME = 'yuvalmendel10/wog:latest'
-        DOCKER_HUB_USERNAME = 'yuvalmen10@gmail.com'
+        DOCKER_HUB_USERNAME = 'yuvalmendel10'
         DOCKER_HUB_PASSWORD = 'Ap196719196719'
     }
 
