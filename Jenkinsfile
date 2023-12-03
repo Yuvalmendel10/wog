@@ -4,6 +4,8 @@ pipeline {
     environment {
         DOCKER_COMPOSE_VERSION = '1.26.0'
         DOCKER_IMAGE_NAME = 'yuvalmendel10/wog:latest'
+        DOCKER_HUB_USERNAME = 'yuvalmen10@gmail.com'
+        DOCKER_HUB_PASSWORD = 'Ap196719196719'
     }
 
      triggers {
@@ -49,6 +51,31 @@ pipeline {
             }
         }
     }
+
+    stage('Terminate the docker compose') {
+            steps {
+                script {
+                    bat 'docker-compose down'
+                }
+            }
+        }
+
+    stage('Log in to DockerHub') {
+            steps {
+                script {
+                    bat 'docker login -u ${DOCKER_HUB_USERNAME} -p ${DOCKER_HUB_PASSWORD}'
+                }
+            }
+        }
+
+
+    stage('Push the New Image to DockerHub') {
+            steps {
+                script {
+                    bat 'docker-compose push'
+                }
+            }
+        }
 
     }
 
