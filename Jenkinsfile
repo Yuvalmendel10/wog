@@ -63,7 +63,7 @@ pipeline {
     stage('Log in to DockerHub') {
             steps {
                 script {
-                    bat 'docker login -u=DOCKER_HUB_USERNAME -p=DOCKER_HUB_PASSWORD'
+                    bat "docker login -u ${DOCKER_HUB_USERNAME} -p ${DOCKER_HUB_PASSWORD}"
                 }
             }
         }
